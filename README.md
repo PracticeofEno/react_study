@@ -192,3 +192,130 @@ not ${2 * a + b}.`);
 ```
 
 ---
+---
+# 리액트 개념
+
+### React는 사용자를 대신하여 작업을 수행하는 재사용 가능한 코드 스니펫을 포함하는 라이브러리입니다. 이 경우에는 UI를 업데이트합니다.
+
+React 코드 (선언적)
+
+```jsx
+<script type="text/jsx">
+  const app = document.getElementById("app")
+  ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app)
+</script>
+```
+
+바닐라 javascript코드 (명령적)
+
+```jsx
+<script type="text/javascript">
+  const app = document.getElementById('app');
+  const header = document.createElement('h1');
+  const headerContent = document.createTextNode('Develop. Preview. Ship. 🚀');
+  header.appendChild(headerContent);
+  app.appendChild(header);
+</script>
+```
+
+---
+
+### React의 핵심 개념 3가지
+
+- Components
+    
+    React에서 컴포넌트는 **함수입니다.** `script`태그 안에 다음 과 같은 함수를 작성합니다 `header`.
+    
+    컴포넌트 생성 두가지 방법
+    
+    1. React 구성 요소는 일반 HTML 및 JavaScript와 구별하기 위해 대문자로 표시되어야 합니다.
+    
+    ```jsx
+    <script type="text/jsx">
+      const app = document.getElementById("app")
+    
+      function Header() {
+      return <h1>Develop. Preview. Ship. 🚀</h1>;
+    }
+    
+    // Capitalize the React Component
+    ReactDOM.render(Header, app);
+    </script>
+    ```
+    
+    1. 꺾쇠 괄호와 함께 일반 HTML 태그를 사용하는 것과 같은 방식으로 React 구성 요소를 사용합니다 `<>`.
+    
+    ```jsx
+    <script type="text/jsx">
+      const app = document.getElementById("app")
+    
+     function Header() {
+      return <h1>Develop. Preview. Ship. 🚀</h1>;
+    }
+    
+    ReactDOM.render(<Header />, app);
+    ```
+    
+- Props
+- State
+
+### JSX 변수 사용
+- Props
+1. ‘ . ‘ 표기법을 사용 하는 **객체 속성** 
+
+```jsx
+function Header(props) {
+  return <h1>{props.title}</h1>;
+}
+```
+
+1. **템플릿** 리터럴 
+
+```jsx
+function Header({ title }) {
+  return <h1>{`Cool ${title}`}</h1>;
+}
+```
+
+1. 함수 의 **반환 값**
+
+```jsx
+function createTitle(title) {
+  if (title) {
+    return title;
+  } else {
+    return 'Default title';
+  }
+}
+
+function Header({ title }) {
+  return <h1>{createTitle(title)}</h1>;
+}
+```
+
+1. **삼항 연산자** 
+
+```jsx
+function Header({ title }) {
+  return <h1>{title ? title : 'Default Title'}</h1>;
+}
+```
+
+## 사용예
+
+```jsx
+function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>;
+}
+
+function Page() {
+  return (
+    <div>
+      <Header title="React 💙" />
+      <Header title="A new title" />
+    </div>
+  );
+}
+```
+
+
