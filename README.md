@@ -3,6 +3,8 @@
 
 출처 : [https://nextjs.org/learn/foundations/from-javascript-to-react/essential-javascript-react](https://nextjs.org/learn/foundations/from-javascript-to-react/essential-javascript-react)
 
+# 사용되는 Javascript 개념
+
 ## 함수
 
 ---
