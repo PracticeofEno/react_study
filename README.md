@@ -1,6 +1,7 @@
 # react_study
 리액트 공부 학습자료  
 일정 분량 이후의 자료들: https://enocent.notion.site/d274a3deeea1474cbac9d73c6cfe9c41
+Next.js 자료정리 : https://enocent.notion.site/Next-js-4d113967feb5497994a425e26374e774
 
 출처 : [https://nextjs.org/learn/foundations/from-javascript-to-react/essential-javascript-react](https://nextjs.org/learn/foundations/from-javascript-to-react/essential-javascript-react)
 
